@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FITRIX — Premium gym and fitness center. Transform your body, elevate your life." />
+  <title>FITRIX — Train Different</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets — order matters -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       Copy this entire <header> block into every page.
+       Only change the .active class to match the current page.
+       ============================================================ -->
+
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+
+        <!-- Logo -->
+        <a href="index.html" class="navbar__logo" aria-label="FITRIX Home">
+          FIT<span>RIX</span>
+        </a>
+
+        <!-- Desktop navigation links -->
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Desktop CTA button -->
+        <a href="pricing.html" class="navbar__cta">Join Now</a>
+
+        <!-- Hamburger button — mobile only -->
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile dropdown menu -->
+      <div class="navbar__mobile" id="mobileMenu" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="services.html" role="menuitem">Services</a>
+        <a href="trainers.html" role="menuitem">Trainers</a>
+        <a href="pricing.html" role="menuitem">Pricing</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+        <a href="pricing.html" class="navbar__cta" role="menuitem">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+
+  <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+    <!--
+      BACKGROUND IMAGE
+      When you have a real gym photo, uncomment the <img> below,
+      drop the image into assets/images/hero/, update the src,
+      and delete the .hero__bg-fallback div underneath it.
+    -->
+    <!--
+    <img
+      class="hero__bg"
+      src="assets/images/hero/hero-bg.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+    />
+    -->
+
+    <!-- Gradient fallback — remove once real photo is added -->
+    <div class="hero__bg-fallback" aria-hidden="true"></div>
+
+    <!-- Dark overlay on top of background -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Main content — lives in hero__body which grows to fill space above stats -->
+    <div class="hero__body">
+      <div class="container">
+      <div class="hero__content">
+
+        <!-- Eyebrow label -->
+        <div class="hero__eyebrow" aria-hidden="true">
+          <span class="hero__eyebrow-line"></span>
+          <span class="hero__eyebrow-text">Premium Fitness Club</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero__headline" id="hero-heading">
+          Forge Your
+          <span class="highlight">Legacy</span>
+          In Iron
+        </h1>
+
+        <!-- Supporting text -->
+        <p class="hero__subtext">
+          FITRIX is not just a gym — it's a movement. Elite training, world-class coaches,
+          and a community that pushes you beyond your limits. Your transformation starts here.
+        </p>
+
+        <!-- Call to action buttons -->
+        <div class="hero__actions">
+
+          <a href="pricing.html" class="btn btn-primary">Start Your Journey</a>
+
+          <a href="about.html" class="hero__play" aria-label="Learn our story">
+            <span class="hero__play-icon" aria-hidden="true">
+              <!-- Inline SVG play triangle — no external file needed -->
+              <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="0,0 10,6 0,12" />
+              </svg>
+            </span>
+            <span>Our Story</span>
+          </a>
+
+        </div>
+
+      </div><!-- /.hero__content -->
+      </div><!-- /.container -->
+    </div><!-- /.hero__body -->
+
+    <!-- Stats bar — sits naturally at the bottom of the hero column -->
+    <div class="hero__stats" role="list" aria-label="FITRIX by the numbers">
+
+      <div class="hero__stat" role="listitem">
+        <span class="hero__stat-number">2,400<sup>+</sup></span>
+        <span class="hero__stat-label">Active Members</span>
+      </div>
+
+      <div class="hero__stat" role="listitem">
+        <span class="hero__stat-number">18</span>
+        <span class="hero__stat-label">Expert Trainers</span>
+      </div>
+
+      <div class="hero__stat" role="listitem">
+        <span class="hero__stat-number">12</span>
+        <span class="hero__stat-label">Years Running</span>
+      </div>
+
+      <div class="hero__stat" role="listitem">
+        <span class="hero__stat-number">98<sup>%</sup></span>
+        <span class="hero__stat-label">Satisfaction Rate</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES SNAPSHOT
+       3 cards giving a taste of what FITRIX offers.
+       Each card links through to the full Services page.
+       ============================================================ -->
+
+  <section class="services-snap section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="services-snap__header anim-fade-up">
+        <span class="section-label">What We Offer</span>
+        <h2 id="services-heading">
+          Train Smarter. <span class="text-gold">Live Stronger.</span>
+        </h2>
+        <p class="services-snap__intro">
+          From heavy iron to high-intensity cardio, every programme at FITRIX is
+          built around one goal — your results. Pick your path and own it.
+        </p>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="services-snap__grid anim-stagger">
+
+        <!-- Card 1 — Strength Training -->
+        <article class="service-card anim-fade-up">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4"  y="21" width="6"  height="6" rx="1" fill="currentColor"/>
+              <rect x="2"  y="18" width="4"  height="12" rx="1" fill="currentColor" opacity=".6"/>
+              <rect x="38" y="21" width="6"  height="6" rx="1" fill="currentColor"/>
+              <rect x="42" y="18" width="4"  height="12" rx="1" fill="currentColor" opacity=".6"/>
+              <rect x="10" y="22.5" width="28" height="3" rx="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Strength &amp; Conditioning</h3>
+          <p class="service-card__text">
+            Build raw power with structured barbell programmes, free weights,
+            and machine training guided by certified coaches.
+          </p>
+          <a href="services.html" class="service-card__link" aria-label="Learn more about Strength and Conditioning">
+            Explore Programme
+            <span class="service-card__arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </article>
+
+        <!-- Card 2 — HIIT (featured / middle card) -->
+        <article class="service-card service-card--featured anim-fade-up">
+          <div class="service-card__badge">Most Popular</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="28,4 12,26 22,26 20,44 36,22 26,22" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">HIIT &amp; Cardio</h3>
+          <p class="service-card__text">
+            High-intensity intervals that torch calories, spike your metabolism,
+            and keep burning long after you leave the floor.
+          </p>
+          <a href="services.html" class="service-card__link" aria-label="Learn more about HIIT and Cardio">
+            Explore Programme
+            <span class="service-card__arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </article>
+
+        <!-- Card 3 — Personal Training -->
+        <article class="service-card anim-fade-up">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="12" r="7" fill="currentColor"/>
+              <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Personal Training</h3>
+          <p class="service-card__text">
+            One coach. One plan. Built entirely around you — your schedule,
+            your body, your ambitions. Zero guesswork.
+          </p>
+          <a href="services.html" class="service-card__link" aria-label="Learn more about Personal Training">
+            Explore Programme
+            <span class="service-card__arrow" aria-hidden="true">&#8594;</span>
+          </a>
+        </article>
+
+      </div><!-- /.services-snap__grid -->
+
+      <!-- Bottom link to full services page -->
+      <div class="services-snap__footer anim-fade-up">
+        <a href="services.html" class="btn btn-outline">View All Services</a>
+      </div>
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       WHY FITRIX — Features & Benefits
+       Two-column layout: left = text + feature list, right = stat callout card
+       ============================================================ -->
+
+  <section class="why-fitrix section" id="why-fitrix" aria-labelledby="why-heading">
+    <div class="container">
+
+      <div class="why-fitrix__inner">
+
+        <!-- LEFT — text content -->
+        <div class="why-fitrix__left">
+
+          <span class="section-label anim-fade-up">Why Choose Us</span>
+
+          <h2 class="why-fitrix__heading anim-fade-up" id="why-heading">
+            Not Just A Gym.<br>
+            <span class="text-gold">A Whole System.</span>
+          </h2>
+
+          <p class="why-fitrix__lead anim-fade-up">
+            Most gyms hand you a key card and wish you luck. At FITRIX, every member
+            gets a structured path — from day one to peak performance.
+          </p>
+
+          <!-- Feature list -->
+          <ul class="why-fitrix__features anim-stagger" role="list">
+
+            <li class="why-feature anim-fade-up">
+              <span class="why-feature__icon" aria-hidden="true">
+                <!-- Checkmark / shield icon -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2Z" fill="currentColor" opacity=".15"/>
+                  <path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="why-feature__text">
+                <strong>Certified Expert Coaches</strong>
+                <span>Every trainer holds a nationally recognised certification and 3+ years on the floor.</span>
+              </div>
+            </li>
+
+            <li class="why-feature anim-fade-up">
+              <span class="why-feature__icon" aria-hidden="true">
+                <!-- Calendar / plan icon -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="4" width="18" height="18" rx="2" fill="currentColor" opacity=".15"/>
+                  <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M3 9h18" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M7 13h2m4 0h2M7 17h2m4 0h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div class="why-feature__text">
+                <strong>Personalised Training Plans</strong>
+                <span>No copy-paste programmes. Your plan adapts weekly based on your progress data.</span>
+              </div>
+            </li>
+
+            <li class="why-feature anim-fade-up">
+              <span class="why-feature__icon" aria-hidden="true">
+                <!-- Clock / 24h icon -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" fill="currentColor" opacity=".15"/>
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="why-feature__text">
+                <strong>Open 24 / 7, Every Day</strong>
+                <span>Early bird or night owl — the floor is always ready when you are, no exceptions.</span>
+              </div>
+            </li>
+
+            <li class="why-feature anim-fade-up">
+              <span class="why-feature__icon" aria-hidden="true">
+                <!-- Community / people icon -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="9"  cy="7"  r="3.5" fill="currentColor" opacity=".15"/>
+                  <circle cx="9"  cy="7"  r="3.5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="17" cy="8"  r="2.5" fill="currentColor" opacity=".15"/>
+                  <circle cx="17" cy="8"  r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 20c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M17 14c1.657 0 3 1.343 3 3v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <div class="why-feature__text">
+                <strong>A Community That Pushes You</strong>
+                <span>Over 2,400 members who show up, grind together, and celebrate every milestone.</span>
+              </div>
+            </li>
+
+          </ul><!-- /.why-fitrix__features -->
+
+          <a href="about.html" class="btn btn-primary anim-fade-up">Discover Our Story</a>
+
+        </div><!-- /.why-fitrix__left -->
+
+
+        <!-- RIGHT — big stat callout card -->
+        <div class="why-fitrix__right anim-fade-right">
+
+          <div class="why-card">
+
+            <!-- Big gold number -->
+            <div class="why-card__stat">
+              <span class="why-card__number">8<span class="why-card__unit">K+</span></span>
+              <span class="why-card__label">Lives Transformed</span>
+            </div>
+
+            <span class="gold-line"></span>
+
+            <p class="why-card__quote">
+              "FITRIX didn't just change my body — it changed how I think
+              about discipline, consistency, and what I'm capable of."
+            </p>
+
+            <!-- Member credit -->
+            <div class="why-card__member">
+              <div class="why-card__avatar" aria-hidden="true">AO</div>
+              <div class="why-card__member-info">
+                <strong>Adeola Okafor</strong>
+                <span>Member since 2021</span>
+              </div>
+            </div>
+
+            <!-- Small trust badges row -->
+            <div class="why-card__badges" aria-label="Certifications">
+              <span class="why-badge">NSCA Certified</span>
+              <span class="why-badge">ISO Accredited</span>
+              <span class="why-badge">Top Gym 2024</span>
+            </div>
+
+          </div><!-- /.why-card -->
+
+        </div><!-- /.why-fitrix__right -->
+
+      </div><!-- /.why-fitrix__inner -->
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       TRAINERS PREVIEW
+       3 trainer cards with name, specialty, and social links.
+       Full roster lives on trainers.html
+       ============================================================ -->
+
+  <section class="trainers-preview section" id="trainers" aria-labelledby="trainers-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="trainers-preview__header anim-fade-up">
+        <span class="section-label">The Team</span>
+        <h2 id="trainers-heading">
+          Coached By <span class="text-gold">The Best.</span>
+        </h2>
+        <p class="trainers-preview__intro">
+          Every FITRIX trainer is hand-picked for expertise, energy, and results.
+          These aren't just instructors — they're invested in your transformation.
+        </p>
+      </div>
+
+      <!-- Trainer cards grid -->
+      <div class="trainers-preview__grid anim-stagger">
+
+        <!-- Trainer 1 -->
+        <article class="trainer-card anim-fade-up">
+          <div class="trainer-card__image-wrap">
+            <!--
+              Drop a real photo into assets/images/trainers/
+              and replace the src below. The initials placeholder
+              will hide automatically once the image loads.
+            -->
+            <div class="trainer-card__placeholder" aria-hidden="true">KA</div>
+            <!-- <img src="assets/images/trainers/trainer-1.jpg" alt="Kolade Adeyemi" loading="lazy" /> -->
+
+            <!-- Specialty tag sits on top of the image -->
+            <span class="trainer-card__tag">Strength &amp; Power</span>
+          </div>
+
+          <div class="trainer-card__body">
+            <div class="trainer-card__info">
+              <h3 class="trainer-card__name">Kolade Adeyemi</h3>
+              <span class="trainer-card__role">Head Strength Coach</span>
+            </div>
+
+            <!-- Social icons -->
+            <div class="trainer-card__socials" aria-label="Kolade's social links">
+              <a href="#" class="trainer-social" aria-label="Kolade on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href="#" class="trainer-social" aria-label="Kolade on Twitter / X">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 2 -->
+        <article class="trainer-card anim-fade-up">
+          <div class="trainer-card__image-wrap">
+            <div class="trainer-card__placeholder" aria-hidden="true">FO</div>
+            <!-- <img src="assets/images/trainers/trainer-2.jpg" alt="Fatima Osei" loading="lazy" /> -->
+            <span class="trainer-card__tag">HIIT &amp; Cardio</span>
+          </div>
+
+          <div class="trainer-card__body">
+            <div class="trainer-card__info">
+              <h3 class="trainer-card__name">Fatima Osei</h3>
+              <span class="trainer-card__role">HIIT Specialist</span>
+            </div>
+
+            <div class="trainer-card__socials" aria-label="Fatima's social links">
+              <a href="#" class="trainer-social" aria-label="Fatima on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href="#" class="trainer-social" aria-label="Fatima on Twitter / X">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 3 -->
+        <article class="trainer-card anim-fade-up">
+          <div class="trainer-card__image-wrap">
+            <div class="trainer-card__placeholder" aria-hidden="true">EM</div>
+            <!-- <img src="assets/images/trainers/trainer-3.jpg" alt="Emeka Mensah" loading="lazy" /> -->
+            <span class="trainer-card__tag">Nutrition &amp; Wellness</span>
+          </div>
+
+          <div class="trainer-card__body">
+            <div class="trainer-card__info">
+              <h3 class="trainer-card__name">Emeka Mensah</h3>
+              <span class="trainer-card__role">Nutrition Coach</span>
+            </div>
+
+            <div class="trainer-card__socials" aria-label="Emeka's social links">
+              <a href="#" class="trainer-social" aria-label="Emeka on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href="#" class="trainer-social" aria-label="Emeka on Twitter / X">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.trainers-preview__grid -->
+
+      <!-- Link to full trainers page -->
+      <div class="trainers-preview__footer anim-fade-up">
+        <a href="trainers.html" class="btn btn-outline">Meet The Full Team</a>
+      </div>
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS SLIDER
+       Auto-plays through 5 member quotes. Dots and prev/next
+       arrows let the user navigate manually. All logic lives
+       in main.js under the "Testimonials" block.
+       ============================================================ -->
+
+  <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="testimonials__header anim-fade-up">
+        <span class="section-label">Real Results</span>
+        <h2 id="testimonials-heading">
+          What Our <span class="text-gold">Members Say.</span>
+        </h2>
+      </div>
+
+      <!-- Slider wrapper -->
+      <div class="testimonials__slider" role="region" aria-label="Member testimonials">
+
+        <!-- Track — all slides sit here side by side, JS moves this -->
+        <div class="testimonials__track" id="testimonialsTrack">
+
+          <!-- Slide 1 -->
+          <div class="testimonial-slide" role="group" aria-label="Testimonial 1 of 5">
+            <div class="testimonial-card">
+              <!-- Star rating -->
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                <span>&#9733;</span><span>&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "I've tried four gyms in this city. FITRIX is the only one where the
+                coaches actually remember your name and your goals. Three months in,
+                I'm down 14kg and I've never felt stronger."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">TA</div>
+                <div class="testimonial-card__author-info">
+                  <strong>Tunde Adeyinka</strong>
+                  <span>Lost 14kg in 3 months</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide" role="group" aria-label="Testimonial 2 of 5">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                <span>&#9733;</span><span>&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "The HIIT classes here are no joke — but Fatima makes sure you're
+                pushing safely. Six weeks and my resting heart rate dropped by 12
+                points. The results speak for themselves."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">CN</div>
+                <div class="testimonial-card__author-info">
+                  <strong>Chisom Nwosu</strong>
+                  <span>HIIT Programme Member</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide" role="group" aria-label="Testimonial 3 of 5">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                <span>&#9733;</span><span>&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "I was nervous starting as a complete beginner. Kolade built me a
+                programme from scratch, explained everything, and never made me
+                feel out of place. Now I deadlift my own bodyweight. Unreal."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">AO</div>
+                <div class="testimonial-card__author-info">
+                  <strong>Amaka Obi</strong>
+                  <span>Personal Training Client</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="testimonial-slide" role="group" aria-label="Testimonial 4 of 5">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                <span>&#9733;</span><span>&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "The 24/7 access is a game changer. I work night shifts — being
+                able to train at 2am without any compromise in facility quality
+                is something I never thought I'd find."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">IB</div>
+                <div class="testimonial-card__author-info">
+                  <strong>Ibrahim Balogun</strong>
+                  <span>Member since 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="testimonial-slide" role="group" aria-label="Testimonial 5 of 5">
+            <div class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                <span>&#9733;</span><span>&#9733;</span>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "Emeka's nutrition coaching completely changed how I eat around
+                training. I stopped guessing, started fuelling properly, and
+                my energy levels are through the roof every single session."
+              </blockquote>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar" aria-hidden="true">ZK</div>
+                <div class="testimonial-card__author-info">
+                  <strong>Zainab Kamara</strong>
+                  <span>Nutrition Programme Client</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.testimonials__track -->
+
+        <!-- Prev / Next arrow buttons -->
+        <button
+          class="testimonials__btn testimonials__btn--prev"
+          id="testimonialsprev"
+          aria-label="Previous testimonial"
+        >
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button
+          class="testimonials__btn testimonials__btn--next"
+          id="testimonialsNext"
+          aria-label="Next testimonial"
+        >
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+      </div><!-- /.testimonials__slider -->
+
+      <!-- Dot indicators -->
+      <div class="testimonials__dots" id="testimonialsDots" role="tablist" aria-label="Testimonial navigation">
+        <button class="testimonials__dot active" role="tab" aria-selected="true"  aria-label="Go to testimonial 1" data-index="0"></button>
+        <button class="testimonials__dot"        role="tab" aria-selected="false" aria-label="Go to testimonial 2" data-index="1"></button>
+        <button class="testimonials__dot"        role="tab" aria-selected="false" aria-label="Go to testimonial 3" data-index="2"></button>
+        <button class="testimonials__dot"        role="tab" aria-selected="false" aria-label="Go to testimonial 4" data-index="3"></button>
+        <button class="testimonials__dot"        role="tab" aria-selected="false" aria-label="Go to testimonial 5" data-index="4"></button>
+      </div>
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       PRICING SNAPSHOT
+       3 tiers — Basic, Pro, Elite. Pro is highlighted as best value.
+       Full comparison table lives on pricing.html
+       ============================================================ -->
+
+  <section class="pricing-snap section" id="pricing" aria-labelledby="pricing-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="pricing-snap__header anim-fade-up">
+        <span class="section-label">Membership Plans</span>
+        <h2 id="pricing-heading">
+          Simple. Honest. <span class="text-gold">Transparent.</span>
+        </h2>
+        <p class="pricing-snap__intro">
+          No hidden fees. No fine print. Pick the plan that fits your life
+          and start training the same day you sign up.
+        </p>
+      </div>
+
+      <!-- Pricing cards grid -->
+      <div class="pricing-snap__grid anim-stagger">
+
+        <!-- Tier 1 — Basic -->
+        <article class="pricing-card anim-fade-up" aria-label="Basic plan">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Basic</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">$</span>
+              <span class="pricing-card__amount">29</span>
+              <span class="pricing-card__period">/ mo</span>
+            </div>
+            <p class="pricing-card__tagline">Everything you need to get started.</p>
+          </div>
+
+          <ul class="pricing-card__features" role="list">
+            <li class="pricing-feature pricing-feature--yes">Gym floor access</li>
+            <li class="pricing-feature pricing-feature--yes">Locker room &amp; showers</li>
+            <li class="pricing-feature pricing-feature--yes">Group fitness classes (2/week)</li>
+            <li class="pricing-feature pricing-feature--yes">Fitness assessment on joining</li>
+            <li class="pricing-feature pricing-feature--no">Personal training sessions</li>
+            <li class="pricing-feature pricing-feature--no">Nutrition coaching</li>
+            <li class="pricing-feature pricing-feature--no">24 / 7 access</li>
+          </ul>
+
+          <a href="pricing.html" class="btn btn-outline pricing-card__cta">Get Started</a>
+        </article>
+
+
+        <!-- Tier 2 — Pro (featured / best value) -->
+        <article class="pricing-card pricing-card--featured anim-fade-up" aria-label="Pro plan — best value">
+          <div class="pricing-card__badge">Best Value</div>
+
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Pro</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">$</span>
+              <span class="pricing-card__amount">59</span>
+              <span class="pricing-card__period">/ mo</span>
+            </div>
+            <p class="pricing-card__tagline">The full FITRIX experience.</p>
+          </div>
+
+          <ul class="pricing-card__features" role="list">
+            <li class="pricing-feature pricing-feature--yes">Gym floor access</li>
+            <li class="pricing-feature pricing-feature--yes">Locker room &amp; showers</li>
+            <li class="pricing-feature pricing-feature--yes">Unlimited group classes</li>
+            <li class="pricing-feature pricing-feature--yes">Fitness assessment on joining</li>
+            <li class="pricing-feature pricing-feature--yes">2 personal training sessions/mo</li>
+            <li class="pricing-feature pricing-feature--yes">Nutrition coaching</li>
+            <li class="pricing-feature pricing-feature--yes">24 / 7 access</li>
+          </ul>
+
+          <a href="pricing.html" class="btn btn-primary pricing-card__cta">Get Started</a>
+        </article>
+
+
+        <!-- Tier 3 — Elite -->
+        <article class="pricing-card anim-fade-up" aria-label="Elite plan">
+          <div class="pricing-card__header">
+            <span class="pricing-card__tier">Elite</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">$</span>
+              <span class="pricing-card__amount">99</span>
+              <span class="pricing-card__period">/ mo</span>
+            </div>
+            <p class="pricing-card__tagline">For those who want it all.</p>
+          </div>
+
+          <ul class="pricing-card__features" role="list">
+            <li class="pricing-feature pricing-feature--yes">Gym floor access</li>
+            <li class="pricing-feature pricing-feature--yes">Locker room &amp; showers</li>
+            <li class="pricing-feature pricing-feature--yes">Unlimited group classes</li>
+            <li class="pricing-feature pricing-feature--yes">Full fitness &amp; body assessment</li>
+            <li class="pricing-feature pricing-feature--yes">Unlimited personal training</li>
+            <li class="pricing-feature pricing-feature--yes">Full nutrition programme</li>
+            <li class="pricing-feature pricing-feature--yes">24 / 7 VIP access + guest passes</li>
+          </ul>
+
+          <a href="pricing.html" class="btn btn-outline pricing-card__cta">Get Started</a>
+        </article>
+
+      </div><!-- /.pricing-snap__grid -->
+
+      <!-- Link to full pricing page with comparison table -->
+      <div class="pricing-snap__footer anim-fade-up">
+        <p class="pricing-snap__note">
+          All plans include a <strong>7-day free trial</strong>. No card required.
+        </p>
+        <a href="pricing.html" class="btn btn-outline">Compare All Plans</a>
+      </div>
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER
+       Full-width high-contrast strip — final push before footer.
+       Same banner structure will be reused on every other page.
+       ============================================================ -->
+
+  <section class="cta-banner" aria-labelledby="cta-heading">
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-banner__inner anim-fade-up">
+
+        <div class="cta-banner__text">
+          <span class="section-label">Limited Spots Available</span>
+          <h2 class="cta-banner__heading" id="cta-heading">
+            Your Best Self Is <span class="text-gold">One Step Away.</span>
+          </h2>
+          <p class="cta-banner__sub">
+            Join over 2,400 members already training at FITRIX.
+            First 7 days are completely free — no card, no commitment.
+          </p>
+        </div>
+
+        <div class="cta-banner__actions">
+          <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-outline">Talk To Us First</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       Shared across all pages — copy this block into every .html file.
+       ============================================================ -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Top row — logo + nav columns + social -->
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="FITRIX Home">
+            FIT<span>RIX</span>
+          </a>
+          <p class="footer__brand-text">
+            Premium fitness club built for people serious about results.
+            Elite coaches, world-class facilities, zero excuses.
+          </p>
+          <!-- Social icons -->
+          <div class="footer__socials" aria-label="FITRIX on social media">
+            <a href="#" class="footer-social" aria-label="FITRIX on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="FITRIX on Twitter / X">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="FITRIX on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="FITRIX on YouTube">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links column -->
+        <nav class="footer__nav" aria-label="Footer navigation — Quick Links">
+          <h3 class="footer__nav-heading">Quick Links</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="trainers.html">Our Trainers</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Services column -->
+        <nav class="footer__nav" aria-label="Footer navigation — Services">
+          <h3 class="footer__nav-heading">Services</h3>
+          <ul role="list">
+            <li><a href="services.html">Strength &amp; Conditioning</a></li>
+            <li><a href="services.html">HIIT &amp; Cardio</a></li>
+            <li><a href="services.html">Personal Training</a></li>
+            <li><a href="services.html">Nutrition Coaching</a></li>
+            <li><a href="services.html">Yoga &amp; Recovery</a></li>
+            <li><a href="contact.html">BMI Calculator</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact info column -->
+        <div class="footer__contact">
+          <h3 class="footer__nav-heading">Find Us</h3>
+          <ul role="list">
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span>14 Iron District, Lagos, Nigeria</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>+234 800 FITRIX</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>hello@fitrix.com</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>Open 24 / 7 — Every Day</span>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer__top -->
+
+      <!-- Divider -->
+      <div class="footer__divider" aria-hidden="true"></div>
+
+      <!-- Bottom row — copyright + legal links -->
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="footerYear"></span> FITRIX. All rights reserved.
+          This is a demo brand — not a real gym.
+        </p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS — loaded at the bottom so HTML parses first
+       ============================================================ -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

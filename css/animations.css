@@ -1,0 +1,107 @@
+/* ============================================================
+   FITRIX — animations.css
+   Keyframes and scroll-triggered animation classes.
+   animations.js uses IntersectionObserver to add .is-visible
+   which fires the transition on each element.
+   ============================================================ */
+
+
+/* ============================================================
+   1. KEYFRAMES
+   ============================================================ */
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeSlideLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+/* ============================================================
+   2. HERO ENTRANCE ANIMATIONS
+   These run once on page load — no JS needed.
+   Staggered delays let each element breathe before the next.
+   ============================================================ */
+
+.hero__eyebrow {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease 0.2s forwards;
+}
+
+.hero__headline {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease 0.4s forwards;
+}
+
+.hero__subtext {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease 0.6s forwards;
+}
+
+.hero__actions {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease 0.8s forwards;
+}
+
+.hero__stats {
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1.2s forwards;
+}
+
+
+/* ============================================================
+   3. SCROLL-TRIGGERED CLASSES
+   JS adds .js-anim-ready to <body> before it starts observing.
+   This means elements only start hidden AFTER JS has loaded —
+   so they never get stuck invisible if JS is slow or blocked.
+   ============================================================ */
+
+/* Only hide animatable elements once JS is confirmed ready */
+.js-anim-ready .anim-fade-up,
+.js-anim-ready .anim-fade-left,
+.js-anim-ready .anim-fade-right,
+.js-anim-ready .anim-scale-in {
+  opacity: 0;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.js-anim-ready .anim-fade-up    { transform: translateY(30px); }
+.js-anim-ready .anim-fade-left  { transform: translateX(-30px); }
+.js-anim-ready .anim-fade-right { transform: translateX(30px); }
+.js-anim-ready .anim-scale-in   { transform: scale(0.94); }
+
+/* Once .is-visible is added by JS, element animates into place */
+.js-anim-ready .anim-fade-up.is-visible,
+.js-anim-ready .anim-fade-left.is-visible,
+.js-anim-ready .anim-fade-right.is-visible,
+.js-anim-ready .anim-scale-in.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays for grid children */
+.anim-stagger > *:nth-child(1) { transition-delay: 0.05s; }
+.anim-stagger > *:nth-child(2) { transition-delay: 0.15s; }
+.anim-stagger > *:nth-child(3) { transition-delay: 0.25s; }
+.anim-stagger > *:nth-child(4) { transition-delay: 0.35s; }
+.anim-stagger > *:nth-child(5) { transition-delay: 0.45s; }
+.anim-stagger > *:nth-child(6) { transition-delay: 0.55s; }

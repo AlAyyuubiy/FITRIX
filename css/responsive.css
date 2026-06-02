@@ -1,0 +1,413 @@
+/* ============================================================
+   FITRIX — responsive.css
+   All media queries live here.
+   We go mobile-first: base styles are for small screens,
+   then we scale up for tablets and desktops.
+   ============================================================ */
+
+
+/* ============================================================
+   BREAKPOINT REFERENCE
+   --sm:  480px  — large phones
+   --md:  768px  — tablets / landscape phones
+   --lg:  1024px — small laptops
+   --xl:  1200px — desktop (container max)
+   ============================================================ */
+
+
+/* ============================================================
+   TABLET AND BELOW  (max-width: 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* --- Navbar --- */
+
+  /* Hide desktop links and CTA button */
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  /* Show the hamburger menu icon */
+  .navbar__hamburger {
+    display: flex;
+  }
+
+
+  /* --- Hero --- */
+
+  /* Tighter line-height for big headline on small screens */
+  .hero__headline {
+    line-height: 1;
+  }
+
+  /* Remove the decorative left vertical gold line */
+  .hero::before {
+    display: none;
+  }
+
+  /* Reduce top offset on mobile */
+  .hero__body {
+    padding-top: 5rem;
+    padding-bottom: var(--space-xl);
+  }
+
+  /* Two stats per row on tablet */
+  .hero__stats {
+    flex-wrap: wrap;
+  }
+
+  .hero__stat {
+    flex: 1 1 50%;
+  }
+}
+
+
+/* ============================================================
+   SMALL PHONES  (max-width: 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  /* Stack the two CTA buttons vertically */
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Full-width stat blocks on very small screens */
+  .hero__stat {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* ============================================================
+   SERVICES SNAPSHOT
+   ============================================================ */
+
+/* Two columns on tablet */
+@media (max-width: 900px) {
+  .services-snap__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Move the featured card to span full width on its row */
+  .service-card--featured {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 600px) {
+  .services-snap__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card--featured {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   WHY FITRIX
+   ============================================================ */
+
+/* Stack to single column on tablet */
+@media (max-width: 900px) {
+  .why-fitrix__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  /* Card goes below the text on mobile — no need to center it */
+  .why-fitrix__right {
+    justify-content: flex-start;
+  }
+
+  .why-card {
+    max-width: 100%;
+  }
+}
+
+/* Tighten up the feature rows on small phones */
+@media (max-width: 480px) {
+  .why-feature {
+    gap: var(--space-md);
+  }
+
+  .why-card__badges {
+    gap: var(--space-xs);
+  }
+}
+
+
+/* ============================================================
+   TRAINERS PREVIEW
+   ============================================================ */
+
+/* Two columns on tablet */
+@media (max-width: 900px) {
+  .trainers-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 600px) {
+  .trainers-preview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slightly shorter image on mobile so card doesn't feel too tall */
+  .trainer-card__image-wrap {
+    height: 240px;
+  }
+}
+
+
+/* ============================================================
+   TESTIMONIALS SLIDER
+   ============================================================ */
+
+/* Hide arrows on mobile — swipe and dots are enough on touch screens */
+@media (max-width: 600px) {
+
+  /* Remove side padding so slides go edge-to-edge */
+  .testimonials__slider {
+    padding-inline: 0;
+  }
+
+  .testimonials__btn {
+    display: none;
+  }
+
+  .testimonial-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  /* Shrink the decorative quote mark so it doesn't crowd the card */
+  .testimonial-card::after {
+    font-size: 5rem;
+  }
+}
+
+
+/* ============================================================
+   PRICING SNAPSHOT
+   ============================================================ */
+
+/* Two columns on tablet — featured card spans full width */
+@media (max-width: 900px) {
+  .pricing-snap__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset the upward shift on featured card — it looks odd when wrapping */
+  .pricing-card--featured {
+    transform: none;
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .pricing-card--featured:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 600px) {
+  .pricing-snap__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card--featured {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+
+/* Stack text above buttons on tablet */
+@media (max-width: 900px) {
+  .cta-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2xl);
+  }
+
+  .cta-banner__text {
+    max-width: 100%;
+  }
+
+  /* Buttons go side by side when stacked under text */
+  .cta-banner__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cta-banner__actions .btn {
+    width: auto;
+  }
+}
+
+/* Stack buttons vertically on small phones */
+@media (max-width: 480px) {
+  .cta-banner__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cta-banner__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+/* 2-column grid on tablet */
+@media (max-width: 900px) {
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* Brand column spans full width on top */
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 600px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer__brand {
+    grid-column: auto;
+  }
+
+  /* Stack copyright and legal links vertically */
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .footer__legal {
+    gap: var(--space-lg);
+  }
+}
+
+
+/* ============================================================
+   PAGE HERO (shared across all inner pages)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 320px;
+    padding-top: 5rem;
+  }
+
+  .page-hero::before {
+    display: none;
+  }
+
+  .page-hero__heading {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+  }
+}
+
+
+/* ============================================================
+   OUR STORY
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .our-story__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .our-story__card {
+    justify-content: flex-start;
+  }
+
+  .story-card {
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   MISSION & VISION
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .mission-vision {
+    grid-template-columns: 1fr;   /* stack vertically on mobile */
+  }
+
+  /* Gold border switches from right to bottom when stacked */
+  .mv-panel--mission {
+    border-right: none;
+    border-bottom: 2px solid var(--color-gold);
+  }
+}
+
+
+/* ============================================================
+   CORE VALUES
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .core-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .core-values__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   GYM CULTURE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .gym-culture__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .gym-culture__right {
+    justify-content: flex-start;
+  }
+
+  .culture-quote {
+    max-width: 100%;
+  }
+}
