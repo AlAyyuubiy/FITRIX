@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the FITRIX coaching team — certified experts dedicated to your transformation." />
+  <title>Our Trainers — FITRIX</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR — .active on Trainers
+       ============================================================ -->
+
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+
+        <a href="index.html" class="navbar__logo" aria-label="FITRIX Home">
+          FIT<span>RIX</span>
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="trainers.html" class="active">Trainers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="pricing.html" class="navbar__cta">Join Now</a>
+
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <div class="navbar__mobile" id="mobileMenu" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="services.html" role="menuitem">Services</a>
+        <a href="trainers.html" role="menuitem">Trainers</a>
+        <a href="pricing.html" role="menuitem">Pricing</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+        <a href="pricing.html" class="navbar__cta" role="menuitem">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       PAGE HERO
+       ============================================================ -->
+
+  <section class="page-hero" aria-labelledby="trainers-hero-heading">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="section-label anim-fade-up">The Coaching Team</span>
+        <h1 class="page-hero__heading anim-fade-up" id="trainers-hero-heading">
+          Meet The People <span class="text-gold">Behind Your Results.</span>
+        </h1>
+        <nav class="page-hero__breadcrumb anim-fade-up" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Trainers</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TRAINERS INTRO STRIP
+       Short trust statement before the grid
+       ============================================================ -->
+
+  <section class="trainers-intro section" aria-label="Team overview">
+    <div class="container">
+      <div class="trainers-intro__inner anim-fade-up">
+        <div class="trainers-intro__text">
+          <h2>
+            18 Coaches. <span class="text-gold">Zero Average Ones.</span>
+          </h2>
+          <p>
+            Every trainer at FITRIX holds a nationally recognised certification,
+            carries a minimum of 3 years on the gym floor, and goes through a
+            rigorous in-house assessment before they ever coach a member.
+            We don't hire instructors. We hire invested partners in your transformation.
+          </p>
+        </div>
+        <div class="trainers-intro__stats" role="list">
+          <div class="t-stat" role="listitem">
+            <span class="t-stat__number">18</span>
+            <span class="t-stat__label">Certified Coaches</span>
+          </div>
+          <div class="t-stat" role="listitem">
+            <span class="t-stat__number">6</span>
+            <span class="t-stat__label">Specialisations</span>
+          </div>
+          <div class="t-stat" role="listitem">
+            <span class="t-stat__number">3<sup>yr+</sup></span>
+            <span class="t-stat__label">Min. Experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TRAINERS GRID — 6 full trainer cards
+       ============================================================ -->
+
+  <section class="trainers-grid-section section" id="team" aria-labelledby="team-heading">
+    <div class="container">
+
+      <div class="trainers-grid-section__header anim-fade-up">
+        <span class="section-label">Our Coaches</span>
+        <h2 id="team-heading">
+          Find Your <span class="text-gold">Perfect Match.</span>
+        </h2>
+      </div>
+
+      <div class="trainers-full__grid anim-stagger">
+
+        <!-- Trainer 1 — Kolade Adeyemi -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/kolade.jpg" alt="Kolade Ayoola" loading="lazy" />
+            <span class="trainer-full-card__tag">Strength &amp; Power</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Kolade Ayoola</h3>
+                <span class="trainer-full-card__role">Head Strength Coach</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Kolade on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Kolade on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              A former national powerlifting competitor, Kolade brings elite-level
+              strength knowledge to every session. His programming philosophy:
+              master the basics, then build everything else on top.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">NSCA-CSCS</span>
+              <span class="trainer-cert">Precision Nutrition</span>
+              <span class="trainer-cert">8 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 2 — Fatima Osei -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/fatima.jpg" alt="Fatima Osei" loading="lazy" />
+            <span class="trainer-full-card__tag">HIIT &amp; Cardio</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Fatima Osei</h3>
+                <span class="trainer-full-card__role">HIIT Specialist</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Fatima on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Fatima on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              Fatima's classes are the hardest 45 minutes your body will ever
+              thank you for. A certified sports scientist with a background in
+              marathon running, she knows exactly how to push you safely to your limit.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">ACE Certified</span>
+              <span class="trainer-cert">Sports Science BSc</span>
+              <span class="trainer-cert">6 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 3 — Emeka Mensah -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/emeka.jpg" alt="Emeka Mensah" loading="lazy" />
+            <span class="trainer-full-card__tag">Nutrition &amp; Wellness</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Emeka Mensah</h3>
+                <span class="trainer-full-card__role">Head Nutrition Coach</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Emeka on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Emeka on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              Emeka's approach to nutrition is simple: food should fuel your life,
+              not control it. He builds sustainable plans that fit real schedules,
+              real budgets, and real cravings — without sacrificing results.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">Precision Nutrition L2</span>
+              <span class="trainer-cert">ISSN Certified</span>
+              <span class="trainer-cert">5 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 4 — Adaeze Nwosu -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/adaeze.jpg" alt="Adaeze Nwosu" loading="lazy" />
+            <span class="trainer-full-card__tag">Yoga &amp; Recovery</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Adaeze Nwosu</h3>
+                <span class="trainer-full-card__role">Yoga &amp; Mobility Coach</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Adaeze on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Adaeze on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              Adaeze believes recovery is training. Her yoga and mobility sessions
+              have helped hundreds of FITRIX members train harder, get injured less,
+              and move through life with more freedom and less pain.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">RYT-500 Yoga</span>
+              <span class="trainer-cert">FRC Mobility</span>
+              <span class="trainer-cert">7 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 5 — Seun Balogun -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/seun.jpg" alt="Seun Balogun" loading="lazy" />
+            <span class="trainer-full-card__tag">Personal Training</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Seun Balogun</h3>
+                <span class="trainer-full-card__role">Senior Personal Trainer</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Seun on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Seun on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              Seun specialises in body recomposition — helping people lose fat and
+              build muscle simultaneously. His no-nonsense approach and obsessive
+              attention to detail have made him one of FITRIX's most booked coaches.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">NASM-CPT</span>
+              <span class="trainer-cert">Corrective Exercise</span>
+              <span class="trainer-cert">9 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trainer 6 — Zara Kamara -->
+        <article class="trainer-full-card anim-fade-up">
+          <div class="trainer-full-card__image-wrap">
+            <img src="assets/images/trainers/zara.jpg" alt="Zara Kamara" loading="lazy" />
+            <span class="trainer-full-card__tag">Group &amp; Cardio</span>
+          </div>
+          <div class="trainer-full-card__body">
+            <div class="trainer-full-card__top">
+              <div>
+                <h3 class="trainer-full-card__name">Zara Kamara</h3>
+                <span class="trainer-full-card__role">Group Fitness Lead</span>
+              </div>
+              <div class="trainer-full-card__socials">
+                <a href="#" class="trainer-social" aria-label="Zara on Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="trainer-social" aria-label="Zara on Twitter">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="trainer-full-card__bio">
+              Zara leads all group fitness programming at FITRIX. High energy,
+              relentlessly positive, and technically sharp — her classes are
+              consistently the highest-rated sessions in the building.
+            </p>
+            <div class="trainer-full-card__certs">
+              <span class="trainer-cert">Les Mills Certified</span>
+              <span class="trainer-cert">ACE Group Fitness</span>
+              <span class="trainer-cert">4 yrs exp.</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.trainers-full__grid -->
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       JOIN THE TEAM STRIP
+       Recruitment nudge — good for portfolio realism
+       ============================================================ -->
+
+  <section class="join-team section" aria-labelledby="join-heading">
+    <div class="container">
+      <div class="join-team__inner anim-fade-up">
+        <div class="join-team__text">
+          <span class="section-label">Work With Us</span>
+          <h2 id="join-heading">
+            Think You Belong <span class="text-gold">On This Team?</span>
+          </h2>
+          <p>
+            We're always looking for passionate, certified coaches who put
+            members first. If that sounds like you, we'd love to hear from you.
+          </p>
+        </div>
+        <a href="contact.html" class="btn btn-outline">Apply To Coach At FITRIX</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+
+  <section class="cta-banner" aria-labelledby="trainers-cta-heading">
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-banner__inner anim-fade-up">
+        <div class="cta-banner__text">
+          <span class="section-label">Ready To Train?</span>
+          <h2 class="cta-banner__heading" id="trainers-cta-heading">
+            Your Coach Is <span class="text-gold">Waiting For You.</span>
+          </h2>
+          <p class="cta-banner__sub">
+            Pick a plan, get matched with a coach, and start your
+            7-day free trial today. No card required.
+          </p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER — identical across all pages
+       ============================================================ -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="FITRIX Home">FIT<span>RIX</span></a>
+          <p class="footer__brand-text">
+            Premium fitness club built for people serious about results.
+            Elite coaches, world-class facilities, zero excuses.
+          </p>
+          <div class="footer__socials" aria-label="FITRIX on social media">
+            <a href="#" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#" class="footer-social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Quick Links">
+          <h3 class="footer__nav-heading">Quick Links</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="trainers.html">Our Trainers</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Services">
+          <h3 class="footer__nav-heading">Services</h3>
+          <ul role="list">
+            <li><a href="services.html#strength">Strength &amp; Conditioning</a></li>
+            <li><a href="services.html#hiit">HIIT &amp; Cardio</a></li>
+            <li><a href="services.html#personal">Personal Training</a></li>
+            <li><a href="services.html#nutrition">Nutrition Coaching</a></li>
+            <li><a href="services.html#yoga">Yoga &amp; Recovery</a></li>
+            <li><a href="contact.html">BMI Calculator</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <h3 class="footer__nav-heading">Find Us</h3>
+          <ul role="list">
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Mallam Tope filling station, Osogbo, Nigeria</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>+234 813 452 3508</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>fitrixgym@gmail.com.com</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Open 24 / 7 — Every Day</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer__top -->
+
+      <div class="footer__divider" aria-hidden="true"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="footerYear"></span> FITRIX. All rights reserved. This is a demo brand — not a real gym.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

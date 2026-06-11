@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact FITRIX — get in touch, calculate your BMI, or visit us at 14 Iron District, Lagos." />
+  <title>Contact — FITRIX</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- EmailJS — sends form data to your email inbox, no backend needed -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Replace "YOUR_PUBLIC_KEY" with your actual EmailJS public key
+    emailjs.init({ publicKey: "H6UDhAuPYUho4d4VC" });
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR — .active on Contact
+       ============================================================ -->
+
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+
+        <a href="index.html" class="navbar__logo" aria-label="FITRIX Home">
+          FIT<span>RIX</span>
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+        <a href="pricing.html" class="navbar__cta">Join Now</a>
+
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <div class="navbar__mobile" id="mobileMenu" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="services.html" role="menuitem">Services</a>
+        <a href="trainers.html" role="menuitem">Trainers</a>
+        <a href="pricing.html" role="menuitem">Pricing</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+        <a href="pricing.html" class="navbar__cta" role="menuitem">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       PAGE HERO
+       ============================================================ -->
+
+  <section class="page-hero" aria-labelledby="contact-hero-heading">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="section-label anim-fade-up">Get In Touch</span>
+        <h1 class="page-hero__heading anim-fade-up" id="contact-hero-heading">
+          We're Here. <span class="text-gold">Let's Talk.</span>
+        </h1>
+        <nav class="page-hero__breadcrumb anim-fade-up" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT MAIN — Form left, Info right
+       ============================================================ -->
+
+  <section class="contact-main section" id="contact" aria-labelledby="contact-form-heading">
+    <div class="container">
+      <div class="contact-main__inner">
+
+        <!-- LEFT — Contact form -->
+        <div class="contact-form-wrap anim-fade-up">
+          <span class="section-label">Send A Message</span>
+          <h2 id="contact-form-heading">
+            Drop Us A <span class="text-gold">Line.</span>
+          </h2>
+          <p class="contact-form-wrap__sub">
+            Whether you have a question about membership, want to book a
+            free trial, or are interested in coaching at FITRIX — we reply
+            within 24 hours, every day.
+          </p>
+
+          <!-- Contact form — action="#" keeps it demo-safe -->
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+
+            <div class="form-field">
+              <label class="form-field__label" for="fullName">Full Name</label>
+              <input
+                class="form-field__input"
+                type="text"
+                id="fullName"
+                name="from_name"
+                placeholder="e.g. Kolade Adeyemi"
+                autocomplete="name"
+                data-letters-only="true"
+                required
+              />
+              <span class="form-field__error" id="fullNameError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="email">Email Address</label>
+              <input
+                class="form-field__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+              <span class="form-field__error" id="emailError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="subject">Subject</label>
+              <select class="form-field__input form-field__select" id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="membership">Membership Enquiry</option>
+                <option value="trial">Book A Free Trial</option>
+                <option value="personal">Personal Training</option>
+                <option value="nutrition">Nutrition Coaching</option>
+                <option value="coaching">Coaching Application</option>
+                <option value="corporate">Corporate Membership</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="form-field__error" id="subjectError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="message">Message</label>
+              <textarea
+                class="form-field__input form-field__textarea"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us how we can help..."
+                required
+              ></textarea>
+              <span class="form-field__error" id="messageError" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary contact-form__submit" id="formSubmit">
+              Send Message
+            </button>
+
+            <!-- Status message — JS controls what shows here -->
+            <div class="contact-form__status" id="formStatus" hidden aria-live="polite"></div>
+
+          </form>
+        </div><!-- /.contact-form-wrap -->
+
+
+        <!-- RIGHT — Contact info + social links -->
+        <div class="contact-info anim-fade-right">
+
+          <span class="section-label">Find Us</span>
+          <h2>
+            Visit <span class="text-gold">FITRIX.</span>
+          </h2>
+
+          <!-- Info cards -->
+          <div class="contact-info__cards">
+
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="contact-info-card__content">
+                <strong>Address</strong>
+                <span>Mallam Tope filling station,</span>
+                <span> Osogbo, Nigeria</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="contact-info-card__content">
+                <strong>Phone</strong>
+                <span>+234 813 452 3508</span>
+                <span>Mon – Sun, 5am – 11pm</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="contact-info-card__content">
+                <strong>Email</strong>
+                <span>fitrixgym@gmail.com</span>
+                <span>We reply within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="contact-info-card__content">
+                <strong>Opening Hours</strong>
+                <span>24 / 7 for Pro &amp; Elite members</span>
+                <span>5am – 11pm for Basic members</span>
+              </div>
+            </div>
+
+          </div><!-- /.contact-info__cards -->
+
+          <!-- Social media links -->
+          <div class="contact-socials">
+            <p class="contact-socials__label">Follow Us</p>
+            <div class="contact-socials__links" aria-label="FITRIX social media">
+              <a href="#" class="contact-social-link" aria-label="FITRIX on Instagram">
+                <span class="contact-social-link__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </span>
+                <span>Instagram</span>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="FITRIX on Twitter / X">
+                <span class="contact-social-link__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>Twitter / X</span>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="FITRIX on Facebook">
+                <span class="contact-social-link__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="contact-social-link" aria-label="FITRIX on YouTube">
+                <span class="contact-social-link__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
+                </span>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- /.contact-info -->
+
+      </div><!-- /.contact-main__inner -->
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       BMI CALCULATOR
+       ============================================================ -->
+
+  <section class="bmi-section section" id="bmi" aria-labelledby="bmi-heading">
+    <div class="container">
+
+      <div class="bmi-section__header anim-fade-up">
+        <span class="section-label">Know Your Numbers</span>
+        <h2 id="bmi-heading">
+          BMI <span class="text-gold">Calculator.</span>
+        </h2>
+        <p class="bmi-section__intro">
+          Body Mass Index is a quick starting point — not the whole picture.
+          Use it to understand where you are today, then let FITRIX help
+          you get to where you want to be.
+        </p>
+      </div>
+
+      <div class="bmi-wrap anim-fade-up">
+
+        <!-- Unit toggle -->
+        <div class="bmi-toggle" role="group" aria-label="Unit system">
+          <button class="bmi-toggle__btn active" id="metricBtn" aria-pressed="true">Metric (kg / cm)</button>
+          <button class="bmi-toggle__btn" id="imperialBtn" aria-pressed="false">Imperial (lbs / in)</button>
+        </div>
+
+        <div class="bmi-calculator">
+
+          <!-- Inputs -->
+          <div class="bmi-inputs" id="bmiInputs">
+
+            <!-- Metric inputs -->
+            <div class="bmi-inputs__metric" id="metricInputs">
+              <div class="form-field">
+                <label class="form-field__label" for="weightKg">Weight (kg)</label>
+                <input class="form-field__input" type="number" id="weightKg" min="20" max="300" placeholder="e.g. 75" />
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="heightCm">Height (cm)</label>
+                <input class="form-field__input" type="number" id="heightCm" min="100" max="250" placeholder="e.g. 175" />
+              </div>
+            </div>
+
+            <!-- Imperial inputs — hidden until toggle -->
+            <div class="bmi-inputs__imperial" id="imperialInputs" hidden>
+              <div class="form-field">
+                <label class="form-field__label" for="weightLbs">Weight (lbs)</label>
+                <input class="form-field__input" type="number" id="weightLbs" min="44" max="660" placeholder="e.g. 165" />
+              </div>
+              <div class="form-field">
+                <label class="form-field__label" for="heightIn">Height (inches)</label>
+                <input class="form-field__input" type="number" id="heightIn" min="39" max="96" placeholder="e.g. 69" />
+              </div>
+            </div>
+
+          </div><!-- /.bmi-inputs -->
+
+          <!-- Calculate button -->
+          <button class="btn btn-primary bmi-calculator__btn" id="calcBmi">
+            Calculate BMI
+          </button>
+
+          <!-- Result panel — hidden until calculated -->
+          <div class="bmi-result" id="bmiResult" hidden>
+
+            <div class="bmi-result__score-wrap">
+              <span class="bmi-result__number" id="bmiScore">--</span>
+              <span class="bmi-result__category" id="bmiCategory">--</span>
+            </div>
+
+            <!-- Visual range bar -->
+            <div class="bmi-result__bar" aria-hidden="true">
+              <div class="bmi-bar__track">
+                <div class="bmi-bar__segment bmi-bar__segment--under">Underweight<br>&lt;18.5</div>
+                <div class="bmi-bar__segment bmi-bar__segment--normal">Normal<br>18.5–24.9</div>
+                <div class="bmi-bar__segment bmi-bar__segment--over">Overweight<br>25–29.9</div>
+                <div class="bmi-bar__segment bmi-bar__segment--obese">Obese<br>≥30</div>
+              </div>
+              <!-- Needle marker -->
+              <div class="bmi-bar__needle" id="bmiNeedle" style="left: 0%"></div>
+            </div>
+
+            <p class="bmi-result__note" id="bmiNote"></p>
+
+            <a href="#contact" class="btn btn-outline bmi-result__cta">
+              Talk To A FITRIX Coach
+            </a>
+
+          </div><!-- /.bmi-result -->
+
+        </div><!-- /.bmi-calculator -->
+
+      </div><!-- /.bmi-wrap -->
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+
+  <section class="cta-banner" aria-labelledby="contact-cta-heading">
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-banner__inner anim-fade-up">
+        <div class="cta-banner__text">
+          <span class="section-label">What Are You Waiting For?</span>
+          <h2 class="cta-banner__heading" id="contact-cta-heading">
+            First Step Is Always <span class="text-gold">The Hardest.</span>
+          </h2>
+          <p class="cta-banner__sub">
+            Send us a message, walk through the door, or start your
+            free trial online right now. The only wrong move is not making one.
+          </p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="#contact" class="btn btn-outline">Send A Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER — identical across all pages
+       ============================================================ -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="FITRIX Home">FIT<span>RIX</span></a>
+          <p class="footer__brand-text">Premium fitness club built for people serious about results. Elite coaches, world-class facilities, zero excuses.</p>
+          <div class="footer__socials" aria-label="FITRIX on social media">
+            <a href="#" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <a href="#" class="footer-social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#" class="footer-social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Quick Links">
+          <h3 class="footer__nav-heading">Quick Links</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="trainers.html">Our Trainers</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Services">
+          <h3 class="footer__nav-heading">Services</h3>
+          <ul role="list">
+            <li><a href="services.html#strength">Strength &amp; Conditioning</a></li>
+            <li><a href="services.html#hiit">HIIT &amp; Cardio</a></li>
+            <li><a href="services.html#personal">Personal Training</a></li>
+            <li><a href="services.html#nutrition">Nutrition Coaching</a></li>
+            <li><a href="services.html#yoga">Yoga &amp; Recovery</a></li>
+            <li><a href="#bmi">BMI Calculator</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <h3 class="footer__nav-heading">Find Us</h3>
+          <ul role="list">
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Mallam Tope filling station, Osogbo, Nigeria</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>+234 813 452 3508</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>fitrixgym@gmail.com</span></li>
+            <li><span class="footer__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span>Open 24 / 7 — Every Day</span></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__divider" aria-hidden="true"></div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="footerYear"></span> FITRIX. All rights reserved. This is a demo brand — not a real gym.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/bmi.js"></script>
+  <!--
+    EmailJS setup:
+    1. Sign up at https://www.emailjs.com (free tier = 200 emails/month)
+    2. Add an Email Service (Gmail, Outlook, etc.)
+    3. Create an Email Template — use these variable names in your template:
+         {{from_name}}   — sender's full name
+         {{from_email}}  — sender's email
+         {{subject}}     — selected topic
+         {{message}}     — message body
+    4. Replace the three placeholder values in main.js (search "EMAILJS CONFIG")
+  -->
+
+</body>
+</html>

@@ -411,3 +411,238 @@
     max-width: 100%;
   }
 }
+
+
+/* ============================================================
+   SERVICES FULL PAGE
+   ============================================================ */
+
+/* Single column on tablet and below */
+@media (max-width: 900px) {
+  .services-full__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+
+/* Stack steps vertically on tablet — hide arrow connectors */
+@media (max-width: 768px) {
+  .how-it-works__steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-xl);
+  }
+
+  .how-step {
+    max-width: 100%;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: var(--space-xl);
+  }
+
+  /* Hide the horizontal arrow connectors when stacked */
+  .how-step__connector {
+    display: none;
+  }
+
+  /* Reposition the faded number to the left */
+  .how-step__number {
+    position: static;
+    transform: none;
+    font-size: 3rem;
+    opacity: 0.15;
+    flex-shrink: 0;
+    line-height: 1.2;
+  }
+
+  .how-step__icon {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* ============================================================
+   TRAINERS INTRO STRIP
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .trainers-intro__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2xl);
+  }
+
+  .trainers-intro__stats {
+    width: 100%;
+    justify-content: flex-start;
+    gap: var(--space-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-intro__stats {
+    gap: var(--space-xl);
+  }
+}
+
+
+/* ============================================================
+   TRAINERS FULL GRID
+   ============================================================ */
+
+/* 2 columns on tablet */
+@media (max-width: 900px) {
+  .trainers-full__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 560px) {
+  .trainers-full__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-full-card__image-wrap {
+    height: 200px;
+  }
+}
+
+
+/* ============================================================
+   JOIN THE TEAM STRIP
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .join-team__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xl);
+  }
+
+  .join-team .btn {
+    white-space: normal;
+  }
+}
+
+
+/* ============================================================
+   PRICING FULL PAGE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .pricing-full__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-card-full--featured {
+    transform: none;
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .pricing-card-full--featured:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-full__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card-full--featured {
+    grid-column: auto;
+    max-width: 100%;
+  }
+}
+
+
+/* ============================================================
+   COMPARISON TABLE
+   ============================================================ */
+
+/* Table scrolls horizontally on mobile — min-width handles it */
+@media (max-width: 600px) {
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-md);
+  }
+}
+
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .faq-item__question {
+    font-size: var(--fs-small);
+  }
+}
+
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+/* Stack form above info on tablet */
+@media (max-width: 900px) {
+  .contact-main__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  /* Unstick info column when stacked */
+  .contact-info {
+    position: static;
+  }
+}
+
+/* Stack name row on mobile */
+@media (max-width: 560px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   BMI CALCULATOR
+   ============================================================ */
+
+@media (max-width: 560px) {
+  .bmi-inputs__metric,
+  .bmi-inputs__imperial {
+    grid-template-columns: 1fr;
+  }
+
+  .bmi-calculator__btn {
+    width: 100%;
+  }
+
+  .bmi-result__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bmi-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}

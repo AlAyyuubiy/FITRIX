@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FITRIX Services — Strength, HIIT, Personal Training, Nutrition, Yoga and more." />
+  <title>Services — FITRIX</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR — .active on Services
+       ============================================================ -->
+
+  <header>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+
+        <a href="index.html" class="navbar__logo" aria-label="FITRIX Home">
+          FIT<span>RIX</span>
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="pricing.html" class="navbar__cta">Join Now</a>
+
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <div class="navbar__mobile" id="mobileMenu" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="about.html" role="menuitem">About</a>
+        <a href="services.html" role="menuitem">Services</a>
+        <a href="trainers.html" role="menuitem">Trainers</a>
+        <a href="pricing.html" role="menuitem">Pricing</a>
+        <a href="contact.html" role="menuitem">Contact</a>
+        <a href="pricing.html" class="navbar__cta" role="menuitem">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       PAGE HERO — reuses .page-hero from style.css
+       ============================================================ -->
+
+  <section class="page-hero" aria-labelledby="services-hero-heading">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="page-hero__overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <span class="section-label anim-fade-up">What We Offer</span>
+        <h1 class="page-hero__heading anim-fade-up" id="services-hero-heading">
+          Train Hard. <span class="text-gold">Train Smart.</span>
+        </h1>
+        <nav class="page-hero__breadcrumb anim-fade-up" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Services</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES GRID
+       6 full service cards — each with icon, description, benefits
+       ============================================================ -->
+
+  <section class="services-full section" id="services" aria-labelledby="services-grid-heading">
+    <div class="container">
+
+      <div class="services-full__header anim-fade-up">
+        <span class="section-label">Our Programmes</span>
+        <h2 id="services-grid-heading">
+          Every Body. <span class="text-gold">Every Goal.</span>
+        </h2>
+        <p class="services-full__intro">
+          Six specialist programmes, each designed and delivered by certified coaches.
+          Whether you're chasing strength, speed, fat loss, or balance —
+          there's a FITRIX programme built for exactly that.
+        </p>
+      </div>
+
+      <!-- Services grid — 2 columns, 3 rows -->
+      <div class="services-full__grid anim-stagger">
+
+        <!-- Service 1 — Strength & Conditioning -->
+        <article class="svc-card anim-fade-up" id="strength">
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4"  y="21" width="6"  height="6" rx="1" fill="currentColor"/>
+              <rect x="2"  y="18" width="4"  height="12" rx="1" fill="currentColor" opacity=".5"/>
+              <rect x="38" y="21" width="6"  height="6" rx="1" fill="currentColor"/>
+              <rect x="42" y="18" width="4"  height="12" rx="1" fill="currentColor" opacity=".5"/>
+              <rect x="10" y="22.5" width="28" height="3" rx="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Strength &amp; Conditioning</h3>
+            <p class="svc-card__text">
+              Built around progressive overload principles, our strength programme
+              takes you from foundational movement patterns to advanced compound
+              lifts. Coached sessions, structured progressions, real results.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>Barbell, dumbbell &amp; machine training</li>
+              <li>Weekly coach check-ins &amp; form reviews</li>
+              <li>Personalised progression tracking</li>
+              <li>Suitable for all levels — beginner to advanced</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-outline svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+        <!-- Service 2 — HIIT & Cardio -->
+        <article class="svc-card svc-card--featured anim-fade-up" id="hiit">
+          <div class="svc-card__tag">Most Popular</div>
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="28,4 12,26 22,26 20,44 36,22 26,22" fill="currentColor" opacity=".2"/>
+              <polygon points="28,4 12,26 22,26 20,44 36,22 26,22" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">HIIT &amp; Cardio</h3>
+            <p class="svc-card__text">
+              Our HIIT classes are engineered for maximum calorie burn in minimum
+              time. Interval-based workouts alternate between explosive effort and
+              active recovery — keeping your heart rate in the fat-burning zone.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>45-minute group sessions, daily schedule</li>
+              <li>Heart-rate monitored intervals</li>
+              <li>Burns up to 600 calories per session</li>
+              <li>Low-impact modifications always available</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-primary svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+        <!-- Service 3 — Personal Training -->
+        <article class="svc-card anim-fade-up" id="personal">
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="12" r="7" fill="currentColor" opacity=".2"/>
+              <circle cx="24" cy="12" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Personal Training</h3>
+            <p class="svc-card__text">
+              One coach dedicated entirely to you. Your programme is built
+              from scratch around your goals, your schedule, and your body —
+              then adjusted every two weeks based on measurable progress data.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>1-on-1 sessions with a certified coach</li>
+              <li>Custom programme rebuilt every 2 weeks</li>
+              <li>Body composition tracking &amp; analysis</li>
+              <li>Flexible scheduling — mornings, evenings, weekends</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-outline svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+        <!-- Service 4 — Nutrition Coaching -->
+        <article class="svc-card anim-fade-up" id="nutrition">
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6C16 6 10 14 10 22c0 10 14 22 14 22s14-12 14-22c0-8-6-16-14-16z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 14v16M16 22h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Nutrition Coaching</h3>
+            <p class="svc-card__text">
+              Training hard with a bad diet is like driving with the handbrake on.
+              Our nutrition coaches build you a sustainable eating plan that fuels
+              your workouts and accelerates your results — no crash diets, ever.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>Personalised macro &amp; calorie targets</li>
+              <li>Weekly check-ins &amp; meal plan adjustments</li>
+              <li>Food log review &amp; feedback</li>
+              <li>Supplement guidance included</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-outline svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+        <!-- Service 5 — Yoga & Recovery -->
+        <article class="svc-card anim-fade-up" id="yoga">
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="10" r="4" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 14v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 20c0 0 4 4 10 4s10-4 10-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18 24l-6 10M30 24l6 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Yoga &amp; Recovery</h3>
+            <p class="svc-card__text">
+              The hardest gainers in the room are the ones who recover properly.
+              Our yoga and mobility classes reduce injury risk, improve range
+              of motion, and give your nervous system the reset it needs.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>Morning flow &amp; evening restorative classes</li>
+              <li>Deep tissue stretch &amp; mobility work</li>
+              <li>Foam rolling &amp; fascia release guidance</li>
+              <li>Pairs perfectly with any strength programme</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-outline svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+        <!-- Service 6 — Group Classes -->
+        <article class="svc-card anim-fade-up" id="group">
+          <div class="svc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="5" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="34" cy="14" r="5" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="24" cy="12" r="5" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4 40c0-5.523 4.477-10 10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M44 40c0-5.523-4.477-10-10-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 40c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="svc-card__body">
+            <h3 class="svc-card__title">Group Classes</h3>
+            <p class="svc-card__text">
+              There's something about training with a room full of people that
+              pushes you further than you'd ever go alone. Our group classes
+              run daily across multiple formats — something for every fitness level.
+            </p>
+            <ul class="svc-card__benefits" role="list">
+              <li>20+ class formats on the weekly schedule</li>
+              <li>Beginner-friendly entry classes every Monday</li>
+              <li>Max 15 people per class — never a crowd</li>
+              <li>Included in Pro &amp; Elite membership plans</li>
+            </ul>
+            <a href="pricing.html" class="btn btn-outline svc-card__cta">Get This Programme</a>
+          </div>
+        </article>
+
+      </div><!-- /.services-full__grid -->
+
+    </div><!-- /.container -->
+  </section>
+
+
+  <!-- ============================================================
+       HOW IT WORKS — 3-step process
+       ============================================================ -->
+
+  <section class="how-it-works section" id="how" aria-labelledby="how-heading">
+    <div class="container">
+
+      <div class="how-it-works__header anim-fade-up">
+        <span class="section-label">The Process</span>
+        <h2 id="how-heading">
+          Getting Started Is <span class="text-gold">Simple.</span>
+        </h2>
+        <p class="how-it-works__intro">
+          From your first enquiry to your first session — three steps is all it takes.
+        </p>
+      </div>
+
+      <div class="how-it-works__steps anim-stagger">
+
+        <!-- Step 1 -->
+        <div class="how-step anim-fade-up">
+          <div class="how-step__number" aria-hidden="true">01</div>
+          <div class="how-step__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="36" height="36" rx="4" fill="currentColor" opacity=".1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="how-step__title">Pick Your Plan</h3>
+          <p class="how-step__text">
+            Browse our membership tiers and choose the one that fits your goals
+            and budget. Not sure? Our team will help you decide in under 5 minutes.
+          </p>
+        </div>
+
+        <!-- Connector arrow -->
+        <div class="how-step__connector" aria-hidden="true">
+          <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12h40M34 6l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="how-step anim-fade-up">
+          <div class="how-step__number" aria-hidden="true">02</div>
+          <div class="how-step__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" fill="currentColor" opacity=".1" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 24l6 6 10-12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="how-step__title">Meet Your Coach</h3>
+          <p class="how-step__text">
+            We match you with a coach suited to your goals. Your first session
+            is a full fitness assessment — we learn your body before we train it.
+          </p>
+        </div>
+
+        <!-- Connector arrow -->
+        <div class="how-step__connector" aria-hidden="true">
+          <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12h40M34 6l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="how-step anim-fade-up">
+          <div class="how-step__number" aria-hidden="true">03</div>
+          <div class="how-step__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6l4 12h13l-10.5 7.5 4 12L24 28l-10.5 7.5 4-12L7 18h13z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="how-step__title">Start Transforming</h3>
+          <p class="how-step__text">
+            Your programme begins. Track progress, hit milestones, and watch
+            your body change week by week — with a coach in your corner every step.
+          </p>
+        </div>
+
+      </div><!-- /.how-it-works__steps -->
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER — same markup as all other pages
+       ============================================================ -->
+
+  <section class="cta-banner" aria-labelledby="services-cta-heading">
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-banner__inner anim-fade-up">
+        <div class="cta-banner__text">
+          <span class="section-label">Ready To Start?</span>
+          <h2 class="cta-banner__heading" id="services-cta-heading">
+            Find Your Programme.<br>
+            <span class="text-gold">Own Your Results.</span>
+          </h2>
+          <p class="cta-banner__sub">
+            Every FITRIX programme comes with a 7-day free trial.
+            No card required. No commitment. Just results.
+          </p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="pricing.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-outline">Ask A Question</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER — identical across all pages
+       ============================================================ -->
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="FITRIX Home">FIT<span>RIX</span></a>
+          <p class="footer__brand-text">
+            Premium fitness club built for people serious about results.
+            Elite coaches, world-class facilities, zero excuses.
+          </p>
+          <div class="footer__socials" aria-label="FITRIX on social media">
+            <a href="#" class="footer-social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4l16 16M4 20L20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Quick Links">
+          <h3 class="footer__nav-heading">Quick Links</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="trainers.html">Our Trainers</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__nav" aria-label="Services">
+          <h3 class="footer__nav-heading">Services</h3>
+          <ul role="list">
+            <li><a href="#strength">Strength &amp; Conditioning</a></li>
+            <li><a href="#hiit">HIIT &amp; Cardio</a></li>
+            <li><a href="#personal">Personal Training</a></li>
+            <li><a href="#nutrition">Nutrition Coaching</a></li>
+            <li><a href="#yoga">Yoga &amp; Recovery</a></li>
+            <li><a href="#group">Group Classes</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <h3 class="footer__nav-heading">Find Us</h3>
+          <ul role="list">
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+              <span>Mallam Tope filling station, Osogbo, Nigeria</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>+234 813 452 3508</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>fitrixgym@gmail.com</span>
+            </li>
+            <li>
+              <span class="footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span>Open 24 / 7 — Every Day</span>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer__top -->
+
+      <div class="footer__divider" aria-hidden="true"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; <span id="footerYear"></span> FITRIX. All rights reserved.
+          This is a demo brand — not a real gym.
+        </p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
